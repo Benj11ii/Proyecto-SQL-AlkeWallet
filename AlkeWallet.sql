@@ -29,6 +29,9 @@ CREATE TABLE transaccion (
     FOREIGN KEY (currency_id) REFERENCES moneda(currency_id)
 );
 
+-- Modificar la tabla usuario para añadir la fecha de creación
+ALTER TABLE usuario ADD COLUMN fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
 -- INSERCIÓN DE DATOS (DML)
 INSERT INTO moneda (currency_name, currency_symbol) VALUES 
 ('Peso Chileno', '$'), 
